@@ -8,7 +8,7 @@ import Parent from './Parent';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  
-<Parent name='rahul'  age = {18}/>
+<Parent name='rahul'  age = {19}/>
 
 
 );
