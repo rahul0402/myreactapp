@@ -1,17 +1,22 @@
-function RahulForm(){
+import React from 'react';
+const RahulForm = ()=>{
+  
+  const activate =()=>{
+    alert('Are you sure ?')
+  }
     return(
      
       <form>
          <h1>Application form</h1>
   
      
-        <h2><label>User Name : </label></h2>
+        <h4><label>User Name : </label></h4>
           <input type = "text"/>
    
-          <h2><label>Age : </label></h2>
+          <h4><label>Age : </label></h4>
           <input type = "number"/><br/>
   
-          <h2><label>Gender : </label></h2>
+          <h4><label>Gender : </label></h4>
               <input type = "radio" name = 'Gender'/>
               <label>Male </label>
               <input type = "radio" name = 'Gender'/>
@@ -19,19 +24,18 @@ function RahulForm(){
           
   
   
-          <h2> <label>Email : </label></h2>
+          <h4> <label>Email : </label></h4>
               <input type = "email"/><br/>
   
-          <h2>  <label> Courses :
+          <h4>  <label> Courses :
                 <select>
                     <option value = "----" selected>-------------</option>
                     <option value = "PHP">PHP</option>
                     <option value = "HTML">HTML</option>
                     <option value = "CSS">CSS</option>
                  </select></label>
-            </h2>
-     
-          <input id = "Demo" type="submit"/>
+            </h4>
+     <button onClick={activate}>Submit</button>
        </form>
     )
     

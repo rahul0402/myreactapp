@@ -1,4 +1,4 @@
-
+import React from 'react';
 import GrantChild from "./GrantChild";
 function Child(props){
     return(

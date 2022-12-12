@@ -1,0 +1,37 @@
+.photoFrame{
+    border: 5px solid black;
+    box-sizing: border-box;
+    padding: 100px ;
+    justify-content: center;
+    background-color: black;
+    
+    
+}
+.display_card{
+    width: 150px;
+    justify-content: center;
+    display: flex;
+    align-self:center
+}
+.display-image{
+    color: white;
+    align-items: center;
+    align-content:space-around;
+}
+.link-name{
+  text-align:start;
+    size: 20px;
+    font-size: x-small;
+}
+.Buttons{
+    align-content:space-around;
+}
+.Buttons > .btn{
+    align-content: space-around;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.body-section{
+    color: white;
+}
+
