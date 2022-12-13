@@ -48,7 +48,7 @@ function Roleslisttable(){
 
   return(
 
-        <Box >
+        <Box>
 
           <Typography sx={userStyle.HeaderText}>Roles <Typography  sx={userStyle.SubHeaderText}>Manage Roles</Typography></Typography>
 
