@@ -1,0 +1,30 @@
+.whole{
+    flex-wrap: wrap;
+}
+.Con-Section{
+    
+    padding: 30px;
+    border: 2px solid black;
+    width: 250px;
+    height: 250px;
+}
+  
+.contact-image{
+    height: 100px;
+    width: 200px;
+}
+.contact-png{
+    height: 18px;
+}
+.contact-info{
+    display: inline;
+}
+.contact-para{
+    display: inline;
+   align-self: center;
+    
+}
+.contact-heading{
+    font-weight: bold;
+}
+
