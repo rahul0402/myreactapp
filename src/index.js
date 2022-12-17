@@ -1,9 +1,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import CountFunc from './Javidh';
-//import AddDeleteFunc from './State';
+//import Colors from './ReactStates/UseState';
 import Object from './JavaScript/Objects';
+
+
 
 
 
@@ -11,7 +12,8 @@ import Object from './JavaScript/Objects';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <div>
-  <Object/>
+    {/* <Colors/> */}
+    <Object/>
  </div>
  
 );

@@ -1,5 +1,8 @@
-import React, { useDebugValue } from "react";
+import React from "react";
 export default function Object(){
+   
+ 
+   
 
 //     //objects methods
 //     let ans = {
@@ -308,22 +311,22 @@ export default function Object(){
 // console.log(findPhones)
 
 
-//Map functions------------------------------------
-const people = [
-    {id:1 , fname:'Rahul' , lname:'Belwin'},
-    {id:3 , fname:'Arun' , lname:'kumar'},
-    {id:2 , fname:'vishal' , lname:'kumaran'}]
-    let finalName = people.map(function(value) {
-        let objfinal = [value.fname, value.lname].join(' ');
-        let obj = {id: value.id , fullname : objfinal}
-        return obj
-        //return value.fname + value.lname
-    })
-    console.log(finalName)
-    //console.log(objfinal)
+// //Map functions------------------------------------
+// const people = [
+//     {id:1 , fname:'Rahul' , lname:'Belwin'},
+//     {id:3 , fname:'Arun' , lname:'kumar'},
+//     {id:2 , fname:'vishal' , lname:'kumaran'}]
+//     let finalName = people.map(function(value) {
+//         let objfinal = [value.fname, value.lname].join(' ');
+//         let obj = {id: value.id , fullname : objfinal}
+//         return obj
+//         //return value.fname + value.lname
+//     })
+//     //console.log(finalName)
+//     //console.log(objfinal)
 
 
-//chaining methods--------------------------------
+// //chaining methods--------------------------------
 const itemsArr =[
     {id : 2 , phone: 'samsung' , rate: 17000},
     {id : 5 , phone: 'apple' , rate: 60000},
@@ -337,6 +340,7 @@ const itemsArr =[
 
 
     })
+    //sort it using names 
     let ascTitle = itemsArr.sort((a,b)=>{
         if(a.phone < b.phone)  return -1
         if(a.phone > b.phone)  return 1
@@ -350,7 +354,7 @@ let prodPrices = itemsArr.filter((value)=>{
 
 })
 
-
+//sort it using lowest price 
 let mappingItems = itemsArr.map((value) => {
     let comName = [value.phone , value.rate].join('- $' )
     let objSucc = {phone : comName}
@@ -363,9 +367,121 @@ let mappingItems = itemsArr.map((value) => {
     console.log(mappingItems)
     //console.log(objSucc)
 
+
+
+// //Reducing Methods in javaScript------------------------------
+const numberred =[1,2,3,4,5,6,7,8,9,10]
+let redANs = numberred.reduce(function(previousValue , currentValue){
+    return previousValue + currentValue
+})
+console.log(redANs)
+
+const itemsArrList =[
+        {id : 2 , phone: 'samsung' , rate: 17000},
+        {id : 5 , phone: 'apple' , rate: 60000},
+         {id : 9 , phone: 'redmi' , rate: 24000}
+        ]
+        let arrListAns = itemsArrList.reduce((accumulator , currentval)=>{
+        return accumulator + currentval.rate
+        } , 0)
+        //console.log(arrListAns)
+
+const mapNum =[1,2,3,4,5]
+let mapNums  = mapNum.map((acc , val)=>{
+    return acc*val
+})
+// console.log (mapNums)
+
+
+
+//fucntion hoisting---------------------------------------------
+function add(){
+    console.log('hello...!!!!')
+}
+add();
+addd();
+function addd(){
+    console.log('hello...!!!!')
+}
+
+const summing = function (){
+    console.log('str')
+}
+summing();
+// summings();
+const summings = function (){
+    console.log('str')
+}
+summings();
+
+
+//Slef Invoking functions-------------------------------------
+((a,b)=>{
+    let rest = a+b;
+    console.log(rest)
+})(5,6);
+
+
+//function arguments--------------------------------------------
+function sumExpense(){
+    let totalSum=0;
+    //arguemnts means that it can include no of items without limit 
+    for(let i of arguments){
+        totalSum += i;
+    }
+    return totalSum;
+}
+let totalExpense = sumExpense(232,66,25,22,10,10,10,10,1,0)
+console.log(`the total expense of all products is ${totalExpense}`)
+
+
+
+//Getters and setters -----------------------------------------
+// let employee = {
+//     fname : 'rahul',
+//     lname :'str',
+//     get fullnames(){
+//         return `${employee.fname} ${employee.lname}`
+//     },
+//     set fullnames(value){
+//         let values = value.split(' ');
+//         this.fname = values[0];
+
+//     }
+// }
+// employee.fullnames= 'Thalapathy'
+// console.log(employee)
+
+// try{
+//     let stringName = 2
+// }
+
+
+// if(typeof(stringName) != 'string'){
+//     const err =new Error('this is not an string ')
+//     throw err
+// }
+
+
+// try{
+//     let errorMsg = "arubn"
+//     if(typeof(errorMsg)!= 'string'){
+//         const err = new Error('Its not an String')
+//         throw err
+//     }
+// }
+// catch(exce){
+//     console.log(exce)
+//     alert(exce)
+  
+
+// }
+
     return(
         <div>
-
+            <h3>Hello JavaScript</h3>
         </div>
     )
+
+
 }
