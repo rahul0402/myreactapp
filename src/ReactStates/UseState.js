@@ -9,7 +9,7 @@ export default function Colors(){
         <button type="button" onClick={()=>setColor('red')}>RedColor</button><br/>
         <button type="button" onClick={()=>setColor('green')}>GreenColor</button><br/>
         <button type="button" onClick={()=>setColor('orange')}>OrangeColor</button><br/>
-        <button type="button" onClick={()=>setColor('white')}>WhiteColor</button><br/>
+        <button type="button" onClick={()=>setColor('white  ')}>WhiteColor</button><br/>
 
        </div>
     )

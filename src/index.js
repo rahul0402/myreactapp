@@ -2,7 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //import Colors from './ReactStates/UseState';
-import Object from './JavaScript/Objects';
+//import Object from './JavaScript/Objects';
+//import EventHand from './Events/EventsHandling';
+//import ItemsList from './States/UseStates';
+import UseStatesEx from './ReactTuto/Spread';
+//import CounterEffect from './ReactTuto/UseEffectts';
 
 
 
@@ -12,8 +16,12 @@ import Object from './JavaScript/Objects';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <div>
+   {/* <EventHand/> */}
     {/* <Colors/> */}
-    <Object/>
+    {/* <Object/> */}
+  {/* <ItemsList/> */}
+  <UseStatesEx/>
+  {/* <CounterEffect/> */}
  </div>
  
 );
