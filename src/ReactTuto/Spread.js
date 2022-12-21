@@ -44,6 +44,42 @@ const [empName , setEmpName] = useState(
         //funcName([...variableName , {values to be inserted should mentioned in curly braces }])
         setEmpName([...empName , {id: ++empName.length , name:'Ronaldo'} , {id:++empName.length, name:'Messi'}])
     }
+//splice and slice methods used here
+    const spliceMethod = ['Rahul' , ' str ' , 'vijay' , 'mbappe', 'messi' , 'ronaldo']
+    spliceMethod.splice(1,1,'ssss')
+    console.log(spliceMethod)
+    const sliceMethod = ['Rahul' , ' str ' , 'vijay' , 'mbappe', 'messi' , 'ronaldo']
+    console.log(sliceMethod.slice(1 , 2))
+
+   
+   //Sorting , sorting(Ascending), sorting(descending)
+
+    const sortNum = [1, 200, 40, 5]
+    console.log(sortNum.sort())
+    const AnsSortAsc= sortNum.sort((a,b)=>{return a-b})
+   console.log(AnsSortAsc)
+    const AnsSortDec= sortNum.sort((a,b)=>{return b-a})
+    console.log(AnsSortDec)
+
+    
+ 
+  console.log('arrow function for answer')
+ 
+
+    console.log(Array.of(1,2,3,4))
+
+    const redANs= [1,2,3,4]
+    const suMReduce = redANs.reduce((accumulator, current)=>{
+        return accumulator + current
+    })
+    console.log(suMReduce)
+
+
+
+
+    //Arrow functions ]
+    const number = num=> num*num
+    console.log(number(5))
     
     return(
         <div>
@@ -76,6 +112,8 @@ const [empName , setEmpName] = useState(
  
             </ul>
             <button onClick={empDetailsFunc}>ADD Employee</button>
+
+          
         </div>
     )
 }
