@@ -1,7 +1,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Higher from './JavaScript/POS/HigherOrder';
+import NavMenu from './JavaScript/Functions/Functions';
+
 
 
 
@@ -10,7 +11,8 @@ import Higher from './JavaScript/POS/HigherOrder';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <div>
-  <Higher/>
+    <NavMenu/>
+
 
  </div>
  

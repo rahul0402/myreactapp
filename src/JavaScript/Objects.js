@@ -238,244 +238,244 @@ export default function Object(){
 
 // //console.log(students)
 
-// //Ascending order-----------------------------------
-// students.sort(
-//     (a,b)=>{
-//         return a-b
-//     }
-// )
-// //console.log(students)
+//Ascending order-----------------------------------
+students.sort(
+    (a,b)=>{
+        return a-b
+    }
+)
+//console.log(students)
 
 
-// ///sorting in array objects ---------------------------------
-// const stud = [
-//     { id:1, name:'rahul'},
-//     { id:6, name:'aumna'},
-//     { id:2, name:'str'}
-// ]
-// // console.log(stud)
-// stud.sort(
-//     (a,b)=>{
-//         if(a.name < b.name) return -1;
-//         if(a.name > b.name) return 1;
-//          return 0;
+///sorting in array objects ---------------------------------
+const stud = [
+    { id:1, name:'rahul'},
+    { id:6, name:'aumna'},
+    { id:2, name:'str'}
+]
+// console.log(stud)
+stud.sort(
+    (a,b)=>{
+        if(a.name < b.name) return -1;
+        if(a.name > b.name) return 1;
+         return 0;
         
-//     }
-// )
-// //console.log(stud)
+    }
+)
+//console.log(stud)
 
-// // primitives in arrays -----------------------------
-// const age=[22,17,60]
-// let isAllowed = age.every(function(value){
-//     return value >=18
-// })
-// console.log(isAllowed)
-// let isSomeParents = age.some(function(value){
-//     return value >=18
-// })
-// console.log(isSomeParents)
+// primitives in arrays -----------------------------
+const age=[22,17,60]
+let isAllowed = age.every(function(value){
+    return value >=18
+})
+console.log(isAllowed)
+let isSomeParents = age.some(function(value){
+    return value >=18
+})
+console.log(isSomeParents)
 
 
-//Filtering the arrays----------------------
+// Filtering the arrays----------------------
 
-// const StudAges=[22,33,17,44]
-// let Adults = StudAges.filter(function(value){
-//     return value>=18
-// })
-// //console.log(Adults)
+const StudAges=[22,33,17,44]
+let Adults = StudAges.filter(function(value){
+    return value>=18
+})
+//console.log(Adults)
 
-// const numbers =[1,2,3,4,5,6,7,8,9,10]
-// let sepOddEven = numbers.filter(function(value){
-//   return !(value % 2 === 0)  
+const numbers =[1,2,3,4,5,6,7,8,9,10]
+let sepOddEven = numbers.filter(function(value){
+  return !(value % 2 === 0)  
   
-// })
-// console.log(sepOddEven)
+})
+console.log(sepOddEven)
 
 
-//List of Objects ---------------------------------------
-// const phones = [
-//     {id : 2 , phone: 'samsung' , rate: 17000},
-//     {id : 5 , phone: 'apple' , rate: 60000},
-//     {id : 9 , phone: 'redmi' , rate: 24000}
-// ]
-// let qualityPhones = phones.filter(function(value){
-//     return value.rate >= 24000
-// })
-// console.log(qualityPhones)
+// List of Objects ---------------------------------------
+const phones = [
+    {id : 2 , phone: 'samsung' , rate: 17000},
+    {id : 5 , phone: 'apple' , rate: 60000},
+    {id : 9 , phone: 'redmi' , rate: 24000}
+]
+let qualityPhones = phones.filter(function(value){
+    return value.rate >= 24000
+})
+console.log(qualityPhones)
 
-// //Find method in array------------------------
+//Find method in array------------------------
 
-// let findPhones = phones.lastIndexOf(function(value){
-//     return value.rate <= 24000
-// })
-// console.log(findPhones)
-
-
-// //Map functions------------------------------------
-// const people = [
-//     {id:1 , fname:'Rahul' , lname:'Belwin'},
-//     {id:3 , fname:'Arun' , lname:'kumar'},
-//     {id:2 , fname:'vishal' , lname:'kumaran'}]
-//     let finalName = people.map(function(value) {
-//         let objfinal = [value.fname, value.lname].join(' ');
-//         let obj = {id: value.id , fullname : objfinal}
-//         return obj
-//         //return value.fname + value.lname
-//     })
-//     //console.log(finalName)
-//     //console.log(objfinal)
+let findPhones = phones.lastIndexOf(function(value){
+    return value.rate <= 24000
+})
+console.log(findPhones)
 
 
-// // //chaining methods--------------------------------
-// const itemsArr =[
-//     {id : 2 , phone: 'samsung' , rate: 17000},
-//     {id : 5 , phone: 'apple' , rate: 60000},
-//      {id : 9 , phone: 'redmi' , rate: 24000}
-//     ]
-//     //sort it using lowest price 
-//     let lowestPrice = itemsArr.sort((a,b)=>{
-//             if(a.rate < b.rate)  return -1
-//             if(a.rate > b.rate)  return 1
-//             if(a.rate === b.rate)  return 0
+//Map functions------------------------------------
+const people = [
+    {id:1 , fname:'Rahul' , lname:'Belwin'},
+    {id:3 , fname:'Arun' , lname:'kumar'},
+    {id:2 , fname:'vishal' , lname:'kumaran'}]
+    let finalName = people.map(function(value) {
+        let objfinal = [value.fname, value.lname].join(' ');
+        let obj = {id: value.id , fullname : objfinal}
+        return obj
+        //return value.fname + value.lname
+    })
+    //console.log(finalName)
+    //console.log(objfinal)
 
 
-//     })
-//     //sort it using names 
-//     let ascTitle = itemsArr.sort((a,b)=>{
-//         if(a.phone < b.phone)  return -1
-//         if(a.phone > b.phone)  return 1
-//         if(a.phone === b.phone)  return 0
+// //chaining methods--------------------------------
+const itemsArr =[
+    {id : 2 , phone: 'samsung' , rate: 17000},
+    {id : 5 , phone: 'apple' , rate: 60000},
+     {id : 9 , phone: 'redmi' , rate: 24000}
+    ]
+    //sort it using lowest price 
+    let lowestPrice = itemsArr.sort((a,b)=>{
+            if(a.rate < b.rate)  return -1
+            if(a.rate > b.rate)  return 1
+            if(a.rate === b.rate)  return 0
 
 
-// })
-
-// let prodPrices = itemsArr.filter((value)=>{
-//     return value.rate <=24000
-
-// })
-
-// //sort it using lowest price 
-// let mappingItems = itemsArr.map((value) => {
-//     let comName = [value.phone , value.rate].join('- $' )
-//     let objSucc = {phone : comName}
-//     return objSucc
-
-// })
-//     console.log(lowestPrice)
-//    console.log(ascTitle)
-//     console.log(prodPrices)
-//     console.log(mappingItems)
-//     //console.log(objSucc)
+    })
+    //sort it using names 
+    let ascTitle = itemsArr.sort((a,b)=>{
+        if(a.phone < b.phone)  return -1
+        if(a.phone > b.phone)  return 1
+        if(a.phone === b.phone)  return 0
 
 
+})
 
-// // //Reducing Methods in javaScript------------------------------
-// const numberred =[1,2,3,4,5,6,7,8,9,10]
-// let redANs = numberred.reduce(function(previousValue , currentValue){
-//     return previousValue + currentValue
-// })
-// console.log(redANs)
+let prodPrices = itemsArr.filter((value)=>{
+    return value.rate <=24000
 
-// const itemsArrList =[
-//         {id : 2 , phone: 'samsung' , rate: 17000},
-//         {id : 5 , phone: 'apple' , rate: 60000},
-//          {id : 9 , phone: 'redmi' , rate: 24000}
-//         ]
-//         let arrListAns = itemsArrList.reduce((accumulator , currentval)=>{
-//         return accumulator + currentval.rate
-//         } , 0)
-//         //console.log(arrListAns)
+})
 
-// const mapNum =[1,2,3,4,5]
-// let mapNums  = mapNum.map((acc , val)=>{
-//     return acc*val
-// })
-// // console.log (mapNums)
+//sort it using lowest price 
+let mappingItems = itemsArr.map((value) => {
+    let comName = [value.phone , value.rate].join('- $' )
+    let objSucc = {phone : comName}
+    return objSucc
+
+})
+    console.log(lowestPrice)
+   console.log(ascTitle)
+    console.log(prodPrices)
+    console.log(mappingItems)
+    //console.log(objSucc)
 
 
 
-// //fucntion hoisting---------------------------------------------
-// function add(){
-//     console.log('hello...!!!!')
-// }
-// add();
-// addd();
-// function addd(){
-//     console.log('hello...!!!!')
-// }
+// //Reducing Methods in javaScript------------------------------
+const numberred =[1,2,3,4,5,6,7,8,9,10]
+let redANs = numberred.reduce(function(previousValue , currentValue){
+    return previousValue + currentValue
+})
+console.log(redANs)
 
-// const summing = function (){
-//     console.log('str')
-// }
-// summing();
-// // summings();
-// const summings = function (){
-//     console.log('str')
-// }
+const itemsArrList =[
+        {id : 2 , phone: 'samsung' , rate: 17000},
+        {id : 5 , phone: 'apple' , rate: 60000},
+         {id : 9 , phone: 'redmi' , rate: 24000}
+        ]
+        let arrListAns = itemsArrList.reduce((accumulator , currentval)=>{
+        return accumulator + currentval.rate
+        } , 0)
+        //console.log(arrListAns)
+
+const mapNum =[1,2,3,4,5]
+let mapNums  = mapNum.map((acc , val)=>{
+    return acc*val
+})
+// console.log (mapNums)
+
+
+
+//fucntion hoisting---------------------------------------------
+function add(){
+    console.log('hello...!!!!')
+}
+add();
+addd();
+function addd(){
+    console.log('hello...!!!!')
+}
+
+const summing = function (){
+    console.log('str')
+}
+summing();
 // summings();
+const summings = function (){
+    console.log('str')
+}
+summings();
 
 
-// //Slef Invoking functions-------------------------------------
-// ((a,b)=>{
-//     let rest = a+b;
-//     console.log(rest)
-// })(5,6);
+//Slef Invoking functions-------------------------------------
+((a,b)=>{
+    let rest = a+b;
+    console.log(rest)
+})(5,6);
 
 
-// //function arguments--------------------------------------------
-// function sumExpense(){
-//     let totalSum=0;
-//     //arguemnts means that it can include no of items without limit 
-//     for(let i of arguments){
-//         totalSum += i;
+//function arguments--------------------------------------------
+function sumExpense(){
+    let totalSum=0;
+    //arguemnts means that it can include no of items without limit 
+    for(let i of arguments){
+        totalSum += i;
+    }
+    return totalSum;
+}
+let totalExpense = sumExpense(232,66,25,22,10,10,10,10,1,0)
+console.log(`the total expense of all products is ${totalExpense}`)
+
+
+
+//Getters and setters -----------------------------------------
+// let employee = {
+//     fname : 'rahul',
+//     lname :'str',
+//     get fullnames(){
+//         return `${employee.fname} ${employee.lname}`
+//     },
+//     set fullnames(value){
+//         let values = value.split(' ');
+//         this.fname = values[0];
+
 //     }
-//     return totalSum;
 // }
-// let totalExpense = sumExpense(232,66,25,22,10,10,10,10,1,0)
-// console.log(`the total expense of all products is ${totalExpense}`)
+// employee.fullnames= 'Thalapathy'
+// console.log(employee)
+
+// try{
+//     let stringName = 2
+// }
 
 
-
-// //Getters and setters -----------------------------------------
-// // let employee = {
-// //     fname : 'rahul',
-// //     lname :'str',
-// //     get fullnames(){
-// //         return `${employee.fname} ${employee.lname}`
-// //     },
-// //     set fullnames(value){
-// //         let values = value.split(' ');
-// //         this.fname = values[0];
-
-// //     }
-// // }
-// // employee.fullnames= 'Thalapathy'
-// // console.log(employee)
-
-// // try{
-// //     let stringName = 2
-// // }
+// if(typeof(stringName) != 'string'){
+//     const err =new Error('this is not an string ')
+//     throw err
+// }
 
 
-// // if(typeof(stringName) != 'string'){
-// //     const err =new Error('this is not an string ')
-// //     throw err
-// // }
-
-
-// // try{
-// //     let errorMsg = "arubn"
-// //     if(typeof(errorMsg)!= 'string'){
-// //         const err = new Error('Its not an String')
-// //         throw err
-// //     }
-// // }
-// // catch(exce){
-// //     console.log(exce)
-// //     alert(exce)
+// try{
+//     let errorMsg = "arubn"
+//     if(typeof(errorMsg)!= 'string'){
+//         const err = new Error('Its not an String')
+//         throw err
+//     }
+// }
+// catch(exce){
+//     console.log(exce)
+//     alert(exce)
   
 
-// // }
+// }
 
     return(
         <div>
