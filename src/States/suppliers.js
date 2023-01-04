@@ -23,6 +23,8 @@ function Supplierlisttable() {
     const [suppliers, setSuppliers] = useState([]);
     const [dateFilter, setDateFilter] = useState({startdate:"",enddate:""})
     const[nameSearch , setNameSearch]=useState([])
+    const[citySearch , setCitySearch]=useState([])
+    
 
     // Suppliers
     const fetchSuppliers = async () => {
@@ -63,11 +65,23 @@ const fetchNameSupplier = async () => {
     }
 };
 
-// useEffect(
-//     ()=>{
-//         console.log(dateFilter.startdate, 'start date')
-//     },[dateFilter]
-// )
+
+
+//City wise filtering the suppliers list 
+const fetchCityWiseSupplier = async () => {
+    try {
+        let req = await axios.get("http://192.168.85.6:8000/api/suppliers");
+        let getCitywithFilter = req.data.suppliers.filter((data)=>{
+
+            return citySearch.suppliercity === data.city
+        })
+        setSuppliers(getCitywithFilter);
+    } catch (err) {
+        const messages = err.response.data.message;
+        toast.error(messages);
+    }
+};
+
 
     return (
         <Box>
@@ -88,12 +102,23 @@ const fetchNameSupplier = async () => {
                 onChange={(e) => {setDateFilter({...dateFilter, enddate: e.target.value})}}
                 />
                 <Button onClick={fetchSuppliers}  variant="contained">Filter</Button>
+
+
+                {/* Name Wise Filter */}
                 <TextField 
                 type="text"
                 value={nameSearch.suppliernames}
                 onChange={(e) => {setNameSearch({...nameSearch, suppliernames: e.target.value})}}
                 />
                 <Button onClick={fetchNameSupplier}  variant="contained">Filter Name</Button>
+
+                {/* City Wise Filter */}
+                <TextField 
+                type="text"
+                value={nameSearch.suppliercity}
+                onChange={(e) => {setCitySearch({...nameSearch, suppliercity: e.target.value})}}
+                />
+                <Button onClick={fetchCityWiseSupplier}  variant="contained">Filter City</Button>
             </Box>
 
 
